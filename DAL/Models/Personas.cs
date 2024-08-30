@@ -25,9 +25,9 @@ namespace DAL.Models
 		public string Direccion { get; set; } = "";
 
 		public DateOnly FechaNacimiento { get; set; }
-        public virtual List<Vehiculos> Vehiculos { get; set; }
+		public virtual List<Vehiculos> Vehiculos { get; set; }
 
-        public Persona GetEntity()
+		public Persona GetEntity()
 		{
 			return new Persona()
 			{

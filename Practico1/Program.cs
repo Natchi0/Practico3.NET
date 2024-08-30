@@ -19,10 +19,10 @@ do
 	Console.WriteLine("1. Personas");
 	Console.WriteLine("2. Vehiculos");
 	Console.WriteLine("0. EXIT");
-
+	//as
 	try
 	{
-		comandoTipo = Console.ReadLine();
+		comandoTipo = Console.ReadLine().ToUpper();
 
 		switch (comandoTipo)
 		{
