@@ -1,6 +1,9 @@
 using DAL;
 using DAL.DALs;
 using DAL.IDALs;
+using BusinessLayer;
+using BusinessLayer.IBLs;
+using BusinessLayer.BLs;
 
 try
 {
@@ -14,17 +17,22 @@ try
     builder.Services.AddSwaggerGen();
 
 
-    //INYECCION DE DEPENDENCIAS
+    /******************************************************************/
+    //                      INYECCION DE DEPENDENCIAS
+    /******************************************************************/
 
     #region INYECCION DE DEPENDENCIAS
     
     //dal
     builder.Services.AddTransient<IDAL_Personas, DAL_Personas_EF>();
+    builder.Services.AddTransient<IDAL_Vehiculos, DAL_Vehiculos_EF>();
 
     //BLs
-    //builder.Services.AddTransient<IBL_Personas, BL_Personas>();
+    builder.Services.AddTransient<IBL_Personas, BL_Personas>();
+    builder.Services.AddTransient<IBL_Vehiculos, BL_Vehiculos>();
 
     #endregion
+
 
 
 

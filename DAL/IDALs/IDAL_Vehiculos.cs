@@ -14,5 +14,6 @@ namespace DAL.IDALs
         void AddVehiculo(Vehiculo vehiculo);
         void DeleteVehiculo(long id);
         void UpdateVehiculo(Vehiculo vehiculo);
+        List<Vehiculo> GetVehiculosByPersona(long id);
     }
 }
